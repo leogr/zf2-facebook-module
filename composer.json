@@ -1,5 +1,5 @@
 {
-    "name": "leogr/zf2-auth-module",
+    "name": "leogr/zf2-facebook-module",
     "description": "ZF2 Module to integrate Facebook PHP SDK",
     "license": "BSD-2-Clause",
     "minimum-stability": "dev",
