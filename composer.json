@@ -2,6 +2,7 @@
     "name": "leogr/zf2-auth-module",
     "description": "ZF2 Module to integrate Facebook PHP SDK",
     "license": "BSD-2-Clause",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Leonardo Grasso",
