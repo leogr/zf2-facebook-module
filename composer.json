@@ -1,0 +1,31 @@
+{
+    "name": "leogr/zf2-auth-module",
+    "description": "ZF2 Module for integrating Facebook PHP SDK",
+    "license": "BSD-2-Clause",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Leonardo Grasso",
+            "email": "me@leonardograsso.com"
+        }
+    ],
+    "require": {
+    	"zendframework/zend-servicemanager": "~2",
+    	"zendframework/zend-sessionmanager": "~2",
+    	"zendframework/zend-modulemanager": "~2",
+        "php": ">=5.3",
+        "facebook/php-sdk": "3.0.*"
+    },
+    "require-dev": {
+       "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "FacebookModule": "src/",
+            "FacebookModuleTest": "tests/"
+        },
+        "classmap": [
+            "./Module.php"
+       ]
+    }
+}
