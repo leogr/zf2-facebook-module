@@ -27,7 +27,7 @@ class FacebookServiceFactory implements FactoryInterface
             throw new \RuntimeException("A '{$this->configKey}' config node must be provided");
         }
 
-        if ($serviceLocator->has('Zend\Session\SessionManager')) {
+        if (!$serviceLocator->has('Zend\Session\SessionManager')) {
             throw new \RuntimeException("Zend\Session\SessionManager required");
         }
 
