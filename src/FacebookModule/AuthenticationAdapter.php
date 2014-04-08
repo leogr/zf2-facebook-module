@@ -64,13 +64,13 @@ class AuthenticationAdapter implements AdapterInterface
      */
     public function authenticate()
     {
-        $token  = $this->getAccessToken();
+        $token  = $this->facebook->getAccessToken();
 
         if (empty($token)) {
             return new Result(Result::FAILURE, null);
         }
 
-        $data   = $this->api('/me');
+        $data   = $this->facebook->api('/me');
         $fbId   = $data['id'];
 
         if (empty($fbId)) {
