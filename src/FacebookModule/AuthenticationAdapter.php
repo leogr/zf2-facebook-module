@@ -77,9 +77,11 @@ class AuthenticationAdapter implements AdapterInterface
             return new Result(Result::FAILURE, null);
         }
 
-        if (!empty($data[$this->identityField])) {
+        $identityFieldName = $this->getIdentityFieldName();
+
+        if (!empty($data[$identityFieldName])) {
             $this->authenticatedUserData = $data;
-            return new Result(Result::SUCCESS, $data[$this->identityField]);
+            return new Result(Result::SUCCESS, $data[$identityFieldName]);
         }
 
         return new Result(Result::FAILURE_IDENTITY_NOT_FOUND, null);
