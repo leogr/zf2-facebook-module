@@ -2,14 +2,14 @@
 namespace FacebookModule;
 
 use Zend\Authentication\Adapter\AdapterInterface;
-use BaseFacebook as Facebook;
+use BaseFacebook;
 use Zend\Authentication\Result;
 
 class AuthenticationAdapter implements AdapterInterface
 {
 
     /**
-     * @var Facebook
+     * @var BaseFacebook
      */
     protected $facebook;
 
@@ -23,7 +23,7 @@ class AuthenticationAdapter implements AdapterInterface
      */
     protected $identityFieldName;
 
-    public function __construct(Facebook $facebook, $identityFieldName = 'email')
+    public function __construct(BaseFacebook $facebook, $identityFieldName = 'email')
     {
         $this->facebook = $facebook;
         $this->setIdentityFieldName($identityFieldName);
