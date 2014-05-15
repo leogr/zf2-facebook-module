@@ -72,6 +72,7 @@ class AuthenticationAdapter implements AdapterInterface
 
         $data   = $this->facebook->api('/me');
         $fbId   = $data['id'];
+        $data['token'] = $token;
 
         if (empty($fbId)) {
             return new Result(Result::FAILURE, null);
